@@ -295,7 +295,7 @@ a {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
 }
 
@@ -659,5 +659,38 @@ footer {
 @media (max-width: 992px) {
     .contact-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+/* Content Pages Styling */
+.content-section {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--bg-darker);
+    padding: 4rem;
+    border-radius: 16px;
+    border: 1px solid var(--glass-border);
+    color: var(--text-muted);
+}
+.content-section h2, .content-section h3 {
+    color: var(--text-main);
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+.content-section p, .content-section ul {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+.content-section ul {
+    padding-left: 1.5rem;
+}
+.content-section li {
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .content-section {
+        padding: 2rem;
     }
 }

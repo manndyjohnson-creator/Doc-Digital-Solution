@@ -47,7 +47,7 @@
                         <i data-feather="map-pin"></i>
                         <div>
                             <h4>Our Location</h4>
-                            <p>123 Digital Ave, Tech City, TC 12345</p>
+                            <p>Om Square Building Second Floor Maqsooda Jalandhar City Punjab 144004</p>
                         </div>
                     </div>
                     
@@ -55,7 +55,7 @@
                         <i data-feather="phone"></i>
                         <div>
                             <h4>Phone Number</h4>
-                            <p>+1 (555) 123-4567</p>
+                            <p>+91 9877625038</p>
                         </div>
                     </div>
                     
@@ -63,37 +63,36 @@
                         <i data-feather="mail"></i>
                         <div>
                             <h4>Email Address</h4>
-                            <p>hello@docdigital.com</p>
+                            <p>contact@docdigitalsolution.com</p>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Contact Form -->
                 <div class="contact-form-container glass-panel fade-in-up delay-2" style="padding: 3rem;">
-                    <form class="full-contact-form">
+                    <form action="https://formspree.io/f/xwvynngq" method="POST" class="full-contact-form" id="contactForm">
                         <div class="form-group">
-                            <label>Full Name</label>
-                            <input type="text" placeholder="John Doe" required>
+                            <label>Company Name</label>
+                            <input type="text" name="Company Name" placeholder="e.g. Acme Corp" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                            <input type="tel" name="Phone Number" placeholder="+91 98765 43210" required>
                         </div>
                         <div class="form-group">
                             <label>Email Address</label>
-                            <input type="email" placeholder="john@example.com" required>
+                            <input type="email" name="Email" placeholder="john@example.com" required>
                         </div>
                         <div class="form-group">
-                            <label>Service of Interest</label>
-                            <select required>
-                                <option value="" disabled selected>Select a service</option>
-                                <option value="lead">Lead Generation</option>
-                                <option value="ads">Google Display Ads</option>
-                                <option value="call">Call Center Solutions</option>
-                                <option value="other">Other</option>
-                            </select>
+                            <label>What leads you need?</label>
+                            <textarea name="Leads Needed" rows="3" placeholder="Describe the type of leads..." required></textarea>
                         </div>
                         <div class="form-group">
-                            <label>Message</label>
-                            <textarea rows="5" placeholder="Tell us about your project..." required></textarea>
+                            <label>What is your daily budget?</label>
+                            <input type="text" name="Daily Budget" placeholder="e.g. ₹5,000" required>
                         </div>
                         <button type="submit" class="btn btn-primary" style="width: 100%; border-radius: 8px; color: white;">Send Message</button>
+                        <div id="form-status" style="display: none; margin-top: 1.5rem; padding: 1rem; border-radius: 8px; text-align: center; font-weight: 600;"></div>
                     </form>
                 </div>
             </div>
@@ -114,22 +113,22 @@
                     <a href="#"><i data-feather="facebook"></i></a>
                 </div>
             </div>
-            <div class="footer-links">
+                        <div class="footer-links">
                 <h4>Services</h4>
                 <ul>
-                    <li><a href="#">Lead Generation</a></li>
-                    <li><a href="#">Google Display Ads</a></li>
-                    <li><a href="#">Call Center Setup</a></li>
-                    <li><a href="#">Consulting</a></li>
+                    <li><a href="index.html#services">Lead Gen (Google & Meta)</a></li>
+                    <li><a href="index.html#services">Display Ads & YouTube</a></li>
+                    <li><a href="index.html#services">Web Creation & Deployment</a></li>
+                    <li><a href="index.html#services">Dialer & Call Center Setups</a></li>
                 </ul>
             </div>
             <div class="footer-links">
                 <h4>Company</h4>
                 <ul>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
                 </ul>
             </div>
         </div>
@@ -141,6 +140,6 @@
     <script>
         feather.replace();
     </script>
-    <script src="script.js"></script>
+    <script src="script.js?v=2"></script>
 </body>
 </html>

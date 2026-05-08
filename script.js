@@ -1,4 +1,57 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Contact Form AJAX Submission
+    const contactForm = document.getElementById('contactForm');
+    const formStatus = document.getElementById('form-status');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const submitButton = contactForm.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.innerText;
+            submitButton.innerText = 'Sending...';
+            submitButton.disabled = true;
+
+            const data = new FormData(contactForm);
+            
+            try {
+                const response = await fetch(contactForm.action, {
+                    method: contactForm.method,
+                    body: data,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    contactForm.reset();
+                    formStatus.style.display = 'block';
+                    formStatus.innerText = 'Thanks for reaching out! We will get back to you shortly.';
+                    formStatus.style.backgroundColor = 'rgba(0, 136, 204, 0.1)';
+                    formStatus.style.color = 'var(--primary)';
+                    formStatus.style.border = '1px solid var(--primary)';
+                } else {
+                    const responseData = await response.json();
+                    let errors = responseData.errors ? responseData.errors.map(error => error.message).join(", ") : "Oops! There was a problem submitting your form.";
+                    formStatus.style.display = 'block';
+                    formStatus.innerText = errors;
+                    formStatus.style.backgroundColor = 'rgba(255, 0, 0, 0.1)';
+                    formStatus.style.color = '#ff4444';
+                    formStatus.style.border = '1px solid rgba(255, 0, 0, 0.3)';
+                }
+            } catch (error) {
+                formStatus.style.display = 'block';
+                formStatus.innerText = "Oops! There was a problem submitting your form.";
+                formStatus.style.backgroundColor = 'rgba(255, 0, 0, 0.1)';
+                formStatus.style.color = '#ff4444';
+                formStatus.style.border = '1px solid rgba(255, 0, 0, 0.3)';
+            } finally {
+                submitButton.innerText = originalButtonText;
+                submitButton.disabled = false;
+            }
+        });
+    }
+
     // Navbar Scroll Effect
     const navbar = document.querySelector('.navbar');
     
