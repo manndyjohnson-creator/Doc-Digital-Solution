@@ -1,0 +1,11 @@
+{
+  "name": "doc-digital-solution",
+  "version": "1.0.0",
+  "description": "Doc Digital Solution Website",
+  "scripts": {
+    "start": "serve -s . -l tcp://0.0.0.0:$PORT"
+  },
+  "dependencies": {
+    "serve": "^14.2.1"
+  }
+}
