@@ -662,9 +662,9 @@ footer {
     width: 100%;
     padding: 1rem 1.5rem;
     border-radius: 8px;
-    border: 1px solid var(--glass-border);
-    background: var(--input-bg);
-    color: var(--input-text);
+    border: 1px solid rgba(0,0,0,0.2);
+    background: #ffffff;
+    color: #000000;
     font-family: inherit;
     outline: none;
     transition: var(--transition);
